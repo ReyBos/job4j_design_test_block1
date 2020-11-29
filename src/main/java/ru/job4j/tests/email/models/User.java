@@ -4,11 +4,16 @@ import java.util.*;
 
 public class User {
     private String name;
-    private Set<String> emails;
+    private TreeSet<String> emails;
 
     public User(String name) {
         this.name = name;
-        this.emails = new HashSet<>();
+        this.emails = new TreeSet<>();
+    }
+
+    public User(String name, TreeSet<String> emails) {
+        this.name = name;
+        this.emails = emails;
     }
 
     public void addEmail(String email) {
@@ -19,7 +24,7 @@ public class User {
         return name;
     }
 
-    public Set<String> getEmails() {
+    public TreeSet<String> getEmails() {
         return emails;
     }
 

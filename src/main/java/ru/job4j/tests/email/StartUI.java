@@ -16,7 +16,7 @@ public class StartUI {
         this.out = out;
     }
 
-    private void init(Input in, Logic logic, List<UserAction> actions) {
+    public void init(Input in, Logic logic, List<UserAction> actions) {
         boolean run = true;
         int actionIndex;
         while (run) {

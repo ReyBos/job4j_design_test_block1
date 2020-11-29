@@ -2,10 +2,7 @@ package ru.job4j.tests.email;
 
 import ru.job4j.tests.email.models.User;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class Logic {
     private List<User> users;
@@ -42,7 +39,7 @@ public class Logic {
             User currUser, mergedUser;
             for (User user: users) {
                 currUser = new User(user.getName());
-                Set<String> emails = user.getEmails();
+                TreeSet<String> emails = user.getEmails();
                 for (String email : emails) {
                     mergedUser = emailUserMap.get(email);
                     if (mergedUser != null) {

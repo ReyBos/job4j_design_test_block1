@@ -24,7 +24,7 @@ public class AddUserAction implements UserAction {
         String msg;
         if (logic.findUserByName(name) == null) {
             User user = new User(name);
-            out.println("для выхода нажмите Enter");
+            out.println("для выхода введите 0");
             do {
                 String email = input.askStr("Введите email: ");
                 if (email.equals("0") || email.equals("")) {
