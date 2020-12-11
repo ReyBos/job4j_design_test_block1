@@ -30,3 +30,19 @@ user5 ->xyz@pisem.net<br>
 Возможный ответ на задачу в указанном примере:<br>
 user1 ->xxx@ya.ru,foo@gmail.com,lol@mail.ru,ups@pisem.net,aaa@bbb.ru<br>
 user3 ->xyz@pisem.net,vasya@pupkin.com<br>
+
+<h2>Использованные средства</h2>
+<a href="https://www.oracle.com/java/technologies/javase-jdk15-downloads.html">Open JDK 14</a> - компилятор\интерпритатор<br>
+<a href="http://maven.apache.org/index.html">Maven</a> - сборка и управление проектом
+
+<h2>Компиляция</h2>
+<pre>
+<code>$ cd job4j_design_tests/chapter_001 
+$ mvn package </code>
+</pre>
+Появится папка chapter_001/target, a в ней файл merge_users.jar
+
+<h2>Запуск</h2>
+<pre>
+<code>$ java -jar merge_users.jar</code>
+</pre>
