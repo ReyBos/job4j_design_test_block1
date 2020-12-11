@@ -8,6 +8,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>chapter_001</module>
+        <module>chapter_002_final_task</module>
     </modules>
     <artifactId>job4j_design_tests</artifactId>
     <version>1.0</version>
