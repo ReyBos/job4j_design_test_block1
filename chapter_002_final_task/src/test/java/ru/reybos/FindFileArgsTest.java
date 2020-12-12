@@ -37,6 +37,7 @@ public class FindFileArgsTest {
                 "-d", "root", "-n", "name.txt", "-f", "-o", "out"
         });
         File success = folder.newFile("name.txt");
+        folder.newFolder();
         File fail = folder.newFile("aname.txt");
         Predicate<Path> func = params.searchFunc();
         assertTrue(func.test(success.toPath()));

@@ -8,6 +8,7 @@ import java.nio.file.attribute.BasicFileAttributes;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 import static java.nio.file.FileVisitResult.CONTINUE;
 
@@ -20,8 +21,10 @@ public class SearchFileVisitor implements FileVisitor<Path> {
         this.paths = new ArrayList<>();
     }
 
-    public List<Path> getPaths() {
-        return paths;
+    public List<String> getPathNames() {
+        return paths.stream()
+                .map(path -> path.toFile().getName())
+                .collect(Collectors.toList());
     }
 
     @Override
