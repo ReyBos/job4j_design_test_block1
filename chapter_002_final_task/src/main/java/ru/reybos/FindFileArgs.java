@@ -32,7 +32,7 @@ public class FindFileArgs {
             error.append(System.lineSeparator());
         }
         if (error.length() != 0) {
-            throw new IllegalArgumentException(error.toString());
+            throw new IllegalArgumentException(System.lineSeparator() + error.toString());
         }
     }
 
