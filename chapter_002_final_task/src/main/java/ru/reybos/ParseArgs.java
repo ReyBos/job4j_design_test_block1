@@ -3,6 +3,9 @@ package ru.reybos;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Тут разбираем параметры пришедшие при запуске программы
+ */
 public class ParseArgs {
     private final Map<String, String> params = new HashMap<>();
 
@@ -10,6 +13,15 @@ public class ParseArgs {
         return params.get(key);
     }
 
+    public boolean hasKey(String key) {
+        return params.containsKey(key);
+    }
+
+    /**
+     * Предполагается что в программу пришли аргументы и что два (и более) ключей могут идти друг
+     * за другом (например "-key1 -key2 val2"), а два (и более) значений нет
+     * (например "-key1 val1 val2"), иначе кидаем исключение IllegalArgumentException()
+     */
     private void parse(String[] args) {
         if (args.length == 0) {
             throw new IllegalArgumentException("Не переданы параметры для запуска программы");
